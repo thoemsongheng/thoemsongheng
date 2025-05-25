@@ -1,0 +1,8 @@
+.spotlight {
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);
+  position: fixed;
+  pointer-events: none;
+}

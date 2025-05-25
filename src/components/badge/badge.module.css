@@ -1,0 +1,9 @@
+.badge {
+  width: max-content;
+  padding: 8px 12px;
+  border-radius: 25px;
+  background-color: var(--highlight);
+
+  font-size: smaller;
+  cursor: default;
+}
