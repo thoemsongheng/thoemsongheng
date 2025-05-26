@@ -1,3 +1,4 @@
+import Badge from "@/components/badge";
 import styles from "./page.module.css";
 import Card from "@/components/card";
 import Spotlight from "@/components/spotlight";
@@ -25,8 +26,8 @@ const Home = () => {
                 aria-describedby="link navigate to about's section."
                 data-active="true"
               >
-                <span className={styles.decoration_bar}></span>
-                <span>About</span>
+                <span className={styles.decoration_bar} />
+                <span>ABOUT</span>
               </a>
             </li>
 
@@ -34,11 +35,11 @@ const Home = () => {
               <a
                 className={styles.link}
                 href="#experience"
-                aria-describedby="link navigate to about's section."
+                aria-describedby="link navigate to experience's section."
                 data-active="true"
               >
-                <span className={styles.decoration_bar}></span>
-                <span>Experience</span>
+                <span className={styles.decoration_bar} />
+                <span>EXPERIENCE</span>
               </a>
             </li>
 
@@ -46,11 +47,11 @@ const Home = () => {
               <a
                 className={styles.link}
                 href="#project"
-                aria-describedby="link navigate to about's section."
+                aria-describedby="link navigate to project's section."
                 data-active="true"
               >
-                <span className={styles.decoration_bar}></span>
-                <span>Project</span>
+                <span className={styles.decoration_bar} />
+                <span>PROJECT</span>
               </a>
             </li>
           </ul>
@@ -80,7 +81,7 @@ const Home = () => {
       </header>
 
       <main>
-        <section id="about">
+        <section className={styles.about_section} id="about">
           <div className={styles.section_title}>
             <h3>About</h3>
           </div>
@@ -109,7 +110,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="experience">
+        <section className={styles.experience_section} id="experience">
           <div className={styles.section_title}>
             <h3>About</h3>
           </div>
@@ -117,19 +118,63 @@ const Home = () => {
           <div className={styles.experience_content}>
             <ol>
               <li>
-                <Card />
+                <Card
+                  type="experience"
+                  title="FEB, 2025 - PRESENT"
+                  company="BONG-IT"
+                  role="Full-stack Developer"
+                  description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  molestiae aut vero suscipit earum, laudantium quo! Illum eos
+                  officia eveniet quia distinctio explicabo, possimus iure aut
+                  voluptatibus. Incidunt, vero accusantium?"
+                  footer={
+                    <>
+                      <Badge label="NextJS" />
+                      <Badge label="TypeScript" />
+                      <Badge label="GraphQL" />
+                    </>
+                  }
+                />
               </li>
 
               <li>
-                <Card />
+                <Card
+                  type="experience"
+                  title="FEB, 2025 - PRESENT"
+                  company="BONG-IT"
+                  role="Full-stack Developer"
+                  description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  molestiae aut vero suscipit earum, laudantium quo! Illum eos
+                  officia eveniet quia distinctio explicabo, possimus iure aut
+                  voluptatibus. Incidunt, vero accusantium?"
+                  footer={
+                    <>
+                      <Badge label="NextJS" />
+                      <Badge label="TypeScript" />
+                      <Badge label="GraphQL" />
+                    </>
+                  }
+                />
               </li>
 
               <li>
-                <Card />
-              </li>
-
-              <li>
-                <Card />
+                <Card
+                  type="experience"
+                  title="2021 - 2023"
+                  company="L192, Mediaload and Little Digital"
+                  role="IT ASSISTANT AND SUPPORT"
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  molestiae aut vero suscipit earum, laudantium quo! Illum eos
+                  officia eveniet quia distinctio explicabo, possimus iure aut
+                  voluptatibus. Incidunt, vero accusantium?`}
+                  footer={
+                    <>
+                      <Badge label="NextJS" />
+                      <Badge label="TypeScript" />
+                      <Badge label="GraphQL" />
+                    </>
+                  }
+                />
               </li>
             </ol>
           </div>

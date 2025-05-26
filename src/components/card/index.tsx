@@ -1,63 +1,33 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Badge from "../badge";
+import { ReactElement } from "react";
 import styles from "./card.module.css";
 
-const Card = () => {
-  const ref = useRef<HTMLDivElement>(null);
+interface CardProps {
+  type: "project" | "experience";
+  title?: string;
+  company?: string;
+  role?: string;
+  description?: string;
+  footer?: ReactElement;
+  image?: ReactElement;
+}
 
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const cardBorder = ref.current;
-
-      const x = event?.clientX;
-      const y = event?.clientY;
-
-      if (ref.current) {
-        ref.current.style.setProperty("--mouse-x", `${x ?? 0}px`);
-        ref.current.style.setProperty("--mouse-y", `${y ?? 0}px`);
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [ref?.current]);
-
+const Card = (props: CardProps) => {
   return (
     <div className={styles.card_container}>
       <div className={styles.card_header}>
-        <p>JAN, 2025 - PRESENT</p>
+        {props.type === "experience" ? <p>{props.title}</p> : props.image}
       </div>
 
       <div className={styles.card_content}>
         <div className={styles.card_title}>
-          <h4>
-            Fullstack developer
-            <span>BONG-IT</span>
-          </h4>
-
-          <h5>Fullstack</h5>
+          <h4>{props.role}</h4>
+          <h5>{props.company}</h5>
         </div>
         <div className={styles.card_description}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eum
-            tenetur autem commodi vero magni et expedita. At ad aperiam
-            voluptas, dolores, tempore commodi veritatis ipsum repellendus harum
-            blanditiis ipsam magni? Necessitatibus optio eius, amet odit,
-            voluptatibus debitis, sapiente repellat at maxime dignissimos
-            dolorum neque.
-          </p>
+          <p>{props.description}</p>
         </div>
-        <div className={styles.card_footer}>
-          <Badge label="NextJS" />
-          <Badge label="TypeScript" />
-          <Badge label="React" />
-        </div>
+        <div className={styles.card_footer}>{props.footer}</div>
       </div>
-
-      <div className={styles.card_border} ref={ref} />
     </div>
   );
 };

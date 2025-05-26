@@ -1,6 +1,7 @@
 .page {
   min-height: 100svh;
   max-width: 1268px;
+
   padding: 32px 0px;
   margin-inline: auto;
 
@@ -12,10 +13,12 @@
 
 .navigation_section {
   height: fit-content;
+
+  padding: 0px 24px;
+
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 48px;
-  padding: 0px 24px;
 }
 
 .hero_container {
@@ -29,8 +32,10 @@
 }
 
 .hero_container > p > span {
-  background-color: var(--accent);
   padding: 0 2px;
+
+  background-color: var(--accent);
+
   font-weight: bold;
 }
 
@@ -48,11 +53,14 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  font-size: 0.9rem;
+  font-weight: 200;
 }
 
 .decoration_bar {
   width: 40px;
   height: 0.4px;
+
   background-color: var(--foreground);
 
   transition: all ease-in-out 160ms;
@@ -63,7 +71,7 @@
 }
 
 .link:hover > span {
-  color: var(--foreground);
+  font-weight: 500;
 }
 
 .link:hover > .decoration_bar {
@@ -72,21 +80,23 @@
 }
 
 .contact_container {
-  align-self: flex-end;
   display: flex;
   gap: 16px;
+
+  align-self: flex-end;
 }
 
 .section_title {
   padding: 24px;
-  background-color: rgb(26, 0, 70) / 100%;
-  backdrop-filter: blur(10px);
+
   position: sticky;
   top: 0;
+  
+  background-color: rgb(26, 0, 70) / 100%;
+  backdrop-filter: blur(10px);
 }
 
 .about_content {
-  padding: 0px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -97,27 +107,49 @@
 }
 
 .experience_content > ol {
-    gap: 16px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.about_content, .experience_content {
+  padding: 40px 24px;
+}
+
+.experience_content {
+  padding-inline: 12px;
 }
 
 @media (min-width: 1024px) {
   .page {
-    gap: 46px;
+    padding: 0px;
     grid-template-columns: 1fr 1fr;
+    gap: 46px;
   }
 
   .navigation_section {
-    padding: 0px 40px; 
     height: calc(100vh - 80px);
+
+    padding: 0px 40px; 
+    
+    position: sticky;
     top: 40px;
     bottom: 40px;
-    position: sticky;
+
+    grid-template-rows: 1fr 2fr 1fr;
   }
 
   .navigation_container {
+    height: 100%;
+
     display: block;
+    align-self: center;
+  }
+
+  .section_title {
+    display: none;
   }
 }
 

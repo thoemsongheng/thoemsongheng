@@ -3,7 +3,9 @@
   padding: 8px 12px;
   border-radius: 25px;
   background-color: var(--highlight);
+  font-size: x-small;
+}
 
-  font-size: smaller;
-  cursor: default;
+.badge:hover {
+  font-weight: bold;
 }
