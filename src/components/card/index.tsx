@@ -1,7 +1,30 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Badge from "../badge";
 import styles from "./card.module.css";
 
 const Card = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      const cardBorder = ref.current;
+
+      const x = event?.clientX;
+      const y = event?.clientY;
+
+      if (ref.current) {
+        ref.current.style.setProperty("--mouse-x", `${x ?? 0}px`);
+        ref.current.style.setProperty("--mouse-y", `${y ?? 0}px`);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [ref?.current]);
+
   return (
     <div className={styles.card_container}>
       <div className={styles.card_header}>
@@ -33,6 +56,8 @@ const Card = () => {
           <Badge label="React" />
         </div>
       </div>
+
+      <div className={styles.card_border} ref={ref} />
     </div>
   );
 };

@@ -5,4 +5,11 @@
   background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);
   position: fixed;
   pointer-events: none;
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .spotlight {
+    display: block;
+  }
 }
