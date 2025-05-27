@@ -3,6 +3,9 @@ import styles from "./page.module.css";
 import Card from "@/components/card";
 import Spotlight from "@/components/spotlight";
 
+import bongit from "@/assets/images/bognit.webp";
+import Image from "next/image";
+
 const Home = () => {
   return (
     <div className={styles.page}>
@@ -88,24 +91,24 @@ const Home = () => {
 
           <div className={styles.about_content}>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur voluptate aut, nemo facilis et aperiam doloribus
-              perspiciatis? Magnam harum explicabo eveniet iste doloribus
-              dignissimos omnis saepe vero ipsum voluptas animi laborum
-              consequatur vitae odit recusandae praesentium itaque laboriosam
-              fugiat porro, at quisquam! Fugit eveniet, nam soluta placeat
-              numquam neque ullam!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-              molestiae aut vero suscipit earum, laudantium quo! Illum eos
-              officia eveniet quia distinctio explicabo, possimus iure aut
-              voluptatibus. Incidunt, vero accusantium?
+              Hi, I'm Songheng, or you can call me Heng. I am a junior
+              full-stack web developer from <span>Cambodia</span>.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-              corporis deleniti ipsum itaque repellendus quia!
+              I graduated with a degree in Computer Science from{" "}
+              <span>Norton University</span> in 2021 and have been pursuing my
+              coding career ever since. I didn't start programming right away,
+              but after some struggles, I made it—
+              <span>{`and you can too. :)`}</span>
+            </p>
+
+            <p>
+              Currently, I work at <span>BONG-IT.net</span> as a full-stack
+              developer. I look forward to improving my skills even further in
+              the future. In my free time, I enjoy watching movies, listening to
+              music, gaming, and trying to recreate cool things I see on the
+              internet.
             </p>
           </div>
         </section>
@@ -130,8 +133,9 @@ const Home = () => {
                   footer={
                     <>
                       <Badge label="NextJS" />
+                      <Badge label="Apollo GraphQL" />
+                      <Badge label="MSSQL" />
                       <Badge label="TypeScript" />
-                      <Badge label="GraphQL" />
                     </>
                   }
                 />
@@ -140,9 +144,9 @@ const Home = () => {
               <li>
                 <Card
                   type="experience"
-                  title="FEB, 2025 - PRESENT"
+                  title="2024 - 2025"
                   company="BONG-IT"
-                  role="Full-stack Developer"
+                  role="Front-end Developer"
                   description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
                   molestiae aut vero suscipit earum, laudantium quo! Illum eos
                   officia eveniet quia distinctio explicabo, possimus iure aut
@@ -169,15 +173,49 @@ const Home = () => {
                   voluptatibus. Incidunt, vero accusantium?`}
                   footer={
                     <>
-                      <Badge label="NextJS" />
-                      <Badge label="TypeScript" />
-                      <Badge label="GraphQL" />
+                      <Badge label="Software" />
+                      <Badge label="Hardware" />
+                      <Badge label="Network" />
                     </>
                   }
                 />
               </li>
             </ol>
           </div>
+        </section>
+
+        <section>
+          <div className={styles.section_title}>
+            <h3>About</h3>
+          </div>
+
+          <ul>
+            <li>
+              <li>
+                <Card
+                  type="project"
+                  image={
+                    <Image
+                      width={160}
+                      height={90}
+                      alt="bong-it project image"
+                      src={bongit}
+                    />
+                  }
+                  company="BONG-IT Landing page"
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  molestiae aut vero suscipit earum, laudantium quo!`}
+                  footer={
+                    <>
+                      <Badge label="Software" />
+                      <Badge label="Hardware" />
+                      <Badge label="Network" />
+                    </>
+                  }
+                />
+              </li>
+            </li>
+          </ul>
         </section>
       </main>
     </div>

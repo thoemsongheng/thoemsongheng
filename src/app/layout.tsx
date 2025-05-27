@@ -10,6 +10,14 @@ const roboto = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Thoem Songheng",
   description: "Thoem Songheng's portfolio site.",
+  robots: { index: true, follow: true },
+  keywords: [
+    "React JS Dev",
+    "Web Developer",
+    "Developer",
+    "Next JS",
+    "Cambodia",
+  ],
 };
 
 const RootLayout = ({
