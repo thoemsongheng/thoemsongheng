@@ -34,7 +34,7 @@
 .hero_container > p > span {
   padding: 0 2px;
 
-  background-color: var(--accent);
+  background-color: var(--highlight);
 
   font-weight: bold;
 }
@@ -50,9 +50,12 @@
 }
 
 .link {
+  width: fit-content;
+
   display: flex;
   align-items: center;
   gap: 16px;
+  
   font-size: 0.9rem;
   font-weight: 200;
 }
