@@ -84,9 +84,19 @@
 
 .contact_container {
   display: flex;
-  gap: 16px;
+  gap: 32px;
 
   align-self: flex-end;
+}
+
+.contact_link > svg {
+  fill: rgb(235, 235, 235);
+  transition: ease-in 100ms;
+}
+
+.contact_link:hover > svg {
+  fill: rgb(255, 255, 255);
+  scale: 1.2;
 }
 
 .section_title {
@@ -97,16 +107,14 @@
   
   background-color: rgb(26, 0, 70) / 100%;
   backdrop-filter: blur(10px);
+
+  z-index: 10;
 }
 
 .about_content {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.experience_content {
-  padding: 12px;
 }
 
 .experience_content > ol {
@@ -117,12 +125,18 @@
   gap: 16px;
 }
 
-.about_content, .experience_content {
+.about_content, .experience_content, .project_content {
   padding: 40px 24px;
 }
 
-.experience_content {
+.experience_content, .project_content {
   padding-inline: 12px;
+}
+
+.footer_container {
+  padding: 12px 24px;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
