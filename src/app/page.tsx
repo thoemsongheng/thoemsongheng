@@ -118,7 +118,7 @@ const Home = () => {
             <Card inline>
               <Card.Header>
                 <Image
-                  src={bongit}
+                  src="/assets/images/bognit.webp"
                   fill
                   objectFit="cover"
                   alt="bong-it landing page site."
