@@ -112,6 +112,56 @@ export default function Home() {
                 </Card.Footer>
               </Card.Content>
             </Card>
+
+            <Card>
+              <Card.Header>
+                <p>2024 - FEB, 2025</p>
+              </Card.Header>
+              <Card.Content>
+                <Card.Title
+                  title="Front-End Developer"
+                  subTitles={["BONG-IT", "MEDIALOAD"]}
+                />
+
+                <Card.Description
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        molestiae aut vero suscipit earum, laudantium quo! Illum eos
+                        officia eveniet quia distinctio explicabo, possimus iure aut
+                        voluptatibus. Incidunt, vero accusantium?`}
+                />
+
+                <Card.Footer>
+                  <Badge label="NextJS" />
+                  <Badge label="Apollo GraphQL" />
+                  <Badge label="TypeScript" />
+                </Card.Footer>
+              </Card.Content>
+            </Card>
+
+            <Card>
+              <Card.Header>
+                <p>2024 - FEB, 2025</p>
+              </Card.Header>
+              <Card.Content>
+                <Card.Title
+                  title="Front-End Developer"
+                  subTitles={["BONG-IT", "MEDIALOAD"]}
+                />
+
+                <Card.Description
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        molestiae aut vero suscipit earum, laudantium quo! Illum eos
+                        officia eveniet quia distinctio explicabo, possimus iure aut
+                        voluptatibus. Incidunt, vero accusantium?`}
+                />
+
+                <Card.Footer>
+                  <Badge label="NextJS" />
+                  <Badge label="Apollo GraphQL" />
+                  <Badge label="TypeScript" />
+                </Card.Footer>
+              </Card.Content>
+            </Card>
           </Section.Content>
         </Section>
 
