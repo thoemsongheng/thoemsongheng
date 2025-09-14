@@ -7,7 +7,7 @@ type SectionProps = {
   id?: string;
 };
 
-const Section = ({ title, children, id }: SectionProps) => {
+export default function Section({ title, children, id }: SectionProps) {
   return (
     <section id={id && id} className={styles.section_container}>
       <div className={styles.section_title}>
@@ -16,7 +16,7 @@ const Section = ({ title, children, id }: SectionProps) => {
       {children}
     </section>
   );
-};
+}
 
 type SectionConentProps = {
   children?: ReactNode;
@@ -34,5 +34,3 @@ Section.Content = ({ children, padding }: SectionConentProps) => {
     </div>
   );
 };
-
-export default Section;

@@ -19,7 +19,7 @@ type NavigationProps = {
   }[];
 };
 
-const Navigation = ({ items }: NavigationProps) => {
+export default function Navigation({ items }: NavigationProps) {
   const [active, setActive] = useState(items[0].url);
 
   useEffect(() => {
@@ -76,6 +76,4 @@ const Navigation = ({ items }: NavigationProps) => {
       </ul>
     </nav>
   );
-};
-
-export default Navigation;
+}

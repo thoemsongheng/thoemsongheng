@@ -36,6 +36,7 @@
 .card_header {
   font-weight: 300;
   font-size: 0.9rem;
+  position: relative;
 }
 
 .card_content {

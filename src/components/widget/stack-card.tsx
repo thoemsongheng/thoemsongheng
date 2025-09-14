@@ -1,8 +1,9 @@
 "use client";
+
 import { ReactElement, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 
-const TechStack = () => {
+export default function TechStack() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const TechStack = () => {
       </TechStack.Item>
     </div>
   );
-};
+}
 
 TechStack.Item = ({ children }: { children: ReactElement }) => {
   return (
@@ -47,5 +48,3 @@ TechStack.Item = ({ children }: { children: ReactElement }) => {
     </div>
   );
 };
-
-export default TechStack;

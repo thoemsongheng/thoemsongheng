@@ -193,6 +193,87 @@ export default function Home() {
                 </Card.Footer>
               </Card.Content>
             </Card>
+
+            <Card inline>
+              <Card.Header>
+                <Image
+                  src="/assets/images/bognit.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
+                  alt="bong-it landing page site."
+                  style={{ objectFit: "cover" }}
+                />
+              </Card.Header>
+              <Card.Content>
+                <Card.Title title="BONG-IT.net" />
+
+                <Card.Description
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        molestiae aut vero suscipit earum.`}
+                />
+
+                <Card.Footer>
+                  <Badge label="NextJS" />
+                  <Badge label="SASS" />
+                  <Badge label="TypeScript" />
+                </Card.Footer>
+              </Card.Content>
+            </Card>
+
+            <Card inline>
+              <Card.Header>
+                <Image
+                  src="/assets/images/bognit.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
+                  alt="bong-it landing page site."
+                  style={{ objectFit: "cover" }}
+                />
+              </Card.Header>
+              <Card.Content>
+                <Card.Title title="BONG-IT.net" />
+
+                <Card.Description
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        molestiae aut vero suscipit earum.`}
+                />
+
+                <Card.Footer>
+                  <Badge label="NextJS" />
+                  <Badge label="SASS" />
+                  <Badge label="TypeScript" />
+                </Card.Footer>
+              </Card.Content>
+            </Card>
+
+            <Card inline>
+              <Card.Header>
+                <Image
+                  src="/assets/images/bognit.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
+                  alt="bong-it landing page site."
+                  style={{ objectFit: "cover" }}
+                />
+              </Card.Header>
+              <Card.Content>
+                <Card.Title title="BONG-IT.net" />
+
+                <Card.Description
+                  description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        molestiae aut vero suscipit earum.`}
+                />
+
+                <Card.Footer>
+                  <Badge label="NextJS" />
+                  <Badge label="SASS" />
+                  <Badge label="TypeScript" />
+                </Card.Footer>
+              </Card.Content>
+            </Card>
           </Section.Content>
         </Section>
 

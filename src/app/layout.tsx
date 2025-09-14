@@ -20,16 +20,14 @@ export const metadata: Metadata = {
   ],
 };
 
-const RootLayout = ({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) => {
+}>) {
   return (
     <html lang="en">
       <body className={`${roboto.variable}`}>{children}</body>
     </html>
   );
-};
-
-export default RootLayout;
+}
