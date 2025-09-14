@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react";
 import styles from "./spotlight.module.css";
 
-const Spotlight = () => {
+export default function Spotlight() {
   const ref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const spotlight = ref.current;
@@ -29,6 +30,4 @@ const Spotlight = () => {
   }, [ref]);
 
   return <div className={styles.spotlight} ref={ref} />;
-};
-
-export default Spotlight;
+}

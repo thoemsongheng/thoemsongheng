@@ -1,19 +1,19 @@
 import { Fragment, ReactNode } from "react";
 import styles from "./card.module.css";
 
-const Card = ({
+export default function Card({
   children,
   inline,
 }: {
   children?: ReactNode;
   inline?: boolean;
-}) => {
+}) {
   return (
     <div className={`${styles.card_container} ${inline && styles.inline}`}>
       {children}
     </div>
   );
-};
+}
 
 Card.Header = ({ children }: { children?: ReactNode }) => {
   return <div className={styles.card_header}>{children && children}</div>;
@@ -65,5 +65,3 @@ Card.Description = ({ description }: { description?: string }) => {
 Card.Footer = ({ children }: { children?: ReactNode }) => {
   return <div className={styles.card_footer}>{children}</div>;
 };
-
-export default Card;

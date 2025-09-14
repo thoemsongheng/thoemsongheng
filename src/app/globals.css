@@ -8,11 +8,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(23, 21, 59);
-    --foreground: #ffffff;
+    --background: rgba(21, 2, 53, 0.158);
+    --foreground: #e0e0e0;
 
     --highlight: rgb(124, 53, 255);
-    --accent: rgb(83, 9, 255);
+    --accent: rgb(72, 9, 220);
   }
 }
 
