@@ -1,4 +1,4 @@
-import styles from "./contactsection.module.css";
+import styles from "./contact-section.module.css";
 
 const ContactSection = () => {
   return (

@@ -39,6 +39,23 @@
   font-weight: bold;
 }
 
+.contact_container {
+  display: flex;
+  gap: 32px;
+
+  align-self: flex-end;
+}
+
+.contact_link > svg {
+  fill: rgb(235, 235, 235);
+  transition: ease-in 100ms;
+}
+
+.contact_link:hover > svg {
+  fill: rgb(255, 255, 255);
+  scale: 1.2;
+}
+
 .footer_container {
   padding: 12px 24px;
   font-size: 0.7rem;
@@ -64,4 +81,3 @@
     grid-template-rows: 1fr 2fr 1fr;
   }
 }
-
