@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import styles from "./section.module.css";
 
 type SectionProps = {
-  title: string;
+  title?: string;
   children?: React.ReactNode;
   id?: string;
 };
@@ -10,9 +10,12 @@ type SectionProps = {
 export default function Section({ title, children, id }: SectionProps) {
   return (
     <section id={id && id} className={styles.section_container}>
-      <div className={styles.section_title}>
-        <h3>{title}</h3>
-      </div>
+      {title && (
+        <div className={styles.section_title}>
+          <h3>{title}</h3>
+        </div>
+      )}
+
       {children}
     </section>
   );

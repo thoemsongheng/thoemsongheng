@@ -5,30 +5,30 @@ const contacts = [
     id: 1,
     name: "github",
     description: "Github link icon",
-    url: "https://www.github.com",
+    url: "https://github.com/thoemsongheng",
     src: "assets/icons/github.svg",
   },
   {
     id: 2,
     name: "gmail",
     description: "Email link icon",
-    url: "https://www.github.com",
+    url: "mailto:thoemsongheng99@gmail.com",
     src: "assets/icons/gmail.svg",
   },
-  {
-    id: 3,
-    name: "linkedin",
-    description: "Linkedin link icon",
-    url: "https://www.github.com",
-    src: "assets/icons/linkedin.svg",
-  },
-  {
-    id: 4,
-    name: "facebook",
-    description: "Facebook link icon",
-    url: "https://www.github.com",
-    src: "assets/icons/facebook.svg",
-  },
+  // {
+  //   id: 3,
+  //   name: "linkedin",
+  //   description: "Linkedin link icon",
+  //   url: "https://www.github.com",
+  //   src: "assets/icons/linkedin.svg",
+  // },
+  // {
+  //   id: 4,
+  //   name: "facebook",
+  //   description: "Facebook link icon",
+  //   url: "https://www.github.com",
+  //   src: "assets/icons/facebook.svg",
+  // },
 ];
 
 export default function ContactSection() {

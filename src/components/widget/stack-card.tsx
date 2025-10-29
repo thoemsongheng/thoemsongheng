@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactElement, useEffect, useRef } from "react";
-import styles from "./styles.module.css";
+import { ReactElement, ReactNode, useEffect, useRef } from "react";
+import styles from "./stack-card.module.css";
 
-export default function TechStack() {
+const TechStack = ({ children }: { children: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,14 +33,12 @@ export default function TechStack() {
 
   return (
     <div ref={ref} className={styles.container}>
-      <TechStack.Item>
-        <img src="assets/icons/react-js.svg" alt="apollo client logo" />
-      </TechStack.Item>
+      {children}
     </div>
   );
-}
+};
 
-TechStack.Item = ({ children }: { children: ReactElement }) => {
+const TechStackItem = ({ children }: { children: ReactNode }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card_border} />
@@ -48,3 +46,5 @@ TechStack.Item = ({ children }: { children: ReactElement }) => {
     </div>
   );
 };
+
+export { TechStack, TechStackItem };
