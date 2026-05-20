@@ -1,13 +1,10 @@
-import profile from "@/assets/profile.jpg"
+import Navigation from "@/components/navigation"
 import { createFileRoute } from "@tanstack/react-router"
-import { Navigation } from "@/components/navigation"
 
-import {
-  FaSquareInstagram,
-  FaSquareGithub,
-  FaSquareEnvelope,
-  FaSquareFacebook,
-} from "react-icons/fa6"
+import HeroSection from "@/components/hero-section"
+import { useEffect, useRef } from "react"
+import { FaGraduationCap, FaLocationPin, FaReact } from "react-icons/fa6"
+import TechStackBlock from "@/components/tech-stack-block"
 
 export const Route = createFileRoute("/")({ component: App })
 
@@ -28,70 +25,70 @@ function App() {
   )
 }
 
-function HeroSection() {
+function AboutSection() {
   return (
-    <section className="relative flex h-180 w-full flex-col items-center justify-center px-4">
-      <div className="absolute h-full w-full bg-[linear-gradient(rgba(51,65,85,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.1)_1px,transparent_1px),linear-gradient(rgba(71,85,105,0.25)_2px,transparent_2px),linear-gradient(90deg,rgba(71,85,105,0.25)_2px,transparent_2px)] bg-size-[50px_50px,50px_50px,200px_200px,200px_200px]" />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(251,146,60,0.08)_0%,transparent_40%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,rgba(251,146,60,0.08)_0%,transparent_40%)]"
-        aria-hidden="true"
-      />
-      <div className="flex max-w-5xl gap-4">
-        <div className="border border-[#091520]/40">
-          <div className="group relative border border-white/5 object-cover">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#f97316_1.5px,transparent_1.5px),linear-gradient(to_bottom,#f97316_1.5px,transparent_1.5px),linear-gradient(to_left,#f97316_1.5px,transparent_1.5px),linear-gradient(to_top,#f97316_1.5px,transparent_1.5px)] bg-size-[16px_16px] bg-position-[0_0,0_0,100%_100%,100%_100%] bg-no-repeat" />
-            <div className="flex aspect-3/4 h-56 max-h-100 w-full items-center justify-center overflow-hidden">
-              <img src={profile} className="h-full w-full object-cover" />
-            </div>
-          </div>
+    <section className="flex w-full flex-col px-4 text-white/90 *:max-w-5xl">
+      <div>
+        <div className="w-full">
+          <h3>About</h3>
         </div>
-        <div className="flex h-full flex-col gap-3 text-white/90">
-          <h1 className="text-3xl font-semibold">THOEM SONGHENG</h1>
-          <div>
-            <h2 className="text-xl">Full-stack web developer</h2>
-            <p className="text-xl font-thin">I build thing for the web.</p>
-          </div>
+
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            maxime sequi facere consequuntur, quaerat quidem similique molestiae
+            tenetur commodi provident cum magnam, quas fugiat nemo dolorem
+            praesentium eligendi, corrupti ex iure enim distinctio autem
+            recusandae eum! Ullam veritatis neque repellat blanditiis cupiditate
+            veniam explicabo quasi aliquid, cumque nesciunt recusandae mollitia
+            totam nemo reiciendis quis eveniet iste sint nihil. Ut itaque maxime
+            recusandae! Eveniet perferendis maxime temporibus sapiente, nulla
+            excepturi vel at id consequatur nisi, cum fugit. Nostrum eos sequi
+            veritatis, consequatur fugiat omnis a eligendi quidem ex aperiam?
+            Laborum optio commodi dolorum rem excepturi ducimus consequatur
+            veniam totam asperiores hic.
+          </p>
         </div>
       </div>
 
-      {/* Social link */}
-      <div className="absolute bottom-12 left-0 flex w-full items-center justify-evenly gap-4 px-10">
-        <div className="text-white">
-          <a href="">
-            <FaSquareFacebook className="h-12 w-12" />
-          </a>
-        </div>
-        <div className="text-white">
-          <a href="">
-            <FaSquareInstagram className="h-12 w-12" />
-          </a>
-        </div>
-        <div className="text-white">
-          <a href="">
-            <FaSquareGithub className="h-12 w-12" />
-          </a>
-        </div>
+      <TechStackBlock />
 
-        <div className="text-white">
-          <a href="">
-            <FaSquareEnvelope className="h-12 w-12" />
-          </a>
+      <div>
+        <h3>Education</h3>
+
+        <div className="relative flex flex-wrap gap-6 border-l pl-6">
+          <EducationCard />
+          <EducationCard />
+          <EducationCard />
         </div>
       </div>
     </section>
   )
 }
 
-function AboutSection() {
+function EducationCard() {
   return (
-    <section className="flex w-full flex-col px-4 text-white/90 *:max-w-5xl">
-      <div className="w-full">
-        <h3>About</h3>
+    <div className="befor:content-[''] relative h-fit w-full rounded-lg border p-6 before:absolute before:top-[50%] before:-left-6 before:h-0.5 before:w-6 before:translate-y-[-50%] before:bg-white after:absolute after:top-[50%] after:-left-8 after:h-3 after:w-3 after:translate-y-[-50%] after:rounded-full after:bg-white after:content-['']">
+      <div>
+        <p className="font-thin">2015-2017</p>
       </div>
-    </section>
+
+      <div>
+        <h4 className="text-2xl font-bold">Phnom thom Highschool</h4>
+      </div>
+
+      <div className="mt-4">
+        <div className="flex items-center gap-2 text-sm font-thin text-white/80">
+          <FaGraduationCap />
+          <span>-</span>
+          <p>General knowlegde</p>
+        </div>
+        <div className="flex items-center gap-2 text-sm font-thin text-white/80">
+          <FaLocationPin />
+          <span>-</span>
+          <p>Phnomthom, Banteay Mean Chey</p>
+        </div>
+      </div>
+    </div>
   )
 }

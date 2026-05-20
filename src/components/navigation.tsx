@@ -1,4 +1,4 @@
-function Navigation() {
+export default function Navigation() {
   return (
     <nav className="sticky top-0 w-full *:px-4">
       <div className="group inert-0 relative top-0 left-0 flex h-16 w-full flex-col items-center justify-center border border-white/5 bg-[#091520]/40 backdrop-blur-xs">
@@ -29,5 +29,3 @@ function Navigation() {
     </nav>
   )
 }
-
-export { Navigation }
