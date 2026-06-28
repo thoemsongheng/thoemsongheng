@@ -1,27 +1,26 @@
-import Navigation from "@/components/navigation"
+import { FaGraduationCap, FaLocationPin, FaReact } from "react-icons/fa6"
+import { Fragment, useEffect, useRef } from "react"
 import { createFileRoute } from "@tanstack/react-router"
 
+import Navigation from "@/components/navigation"
 import HeroSection from "@/components/hero-section"
-import { useEffect, useRef } from "react"
-import { FaGraduationCap, FaLocationPin, FaReact } from "react-icons/fa6"
 import TechStackBlock from "@/components/tech-stack-block"
 
 export const Route = createFileRoute("/")({ component: App })
 
 function App() {
   return (
-    <div className="relative flex h-screen w-screen flex-col overflow-hidden bg-neutral-950">
-      {/* Navigation section */}
+    <Fragment>
       <Navigation />
 
-      <main className="relative min-h-screen w-full overflow-x-hidden overflow-y-auto">
+      <main className="overflow-x-hidden bg-background">
         {/* Hero section */}
         <HeroSection />
 
         {/* About section */}
-        <AboutSection />
+        {/*<AboutSection />*/}
       </main>
-    </div>
+    </Fragment>
   )
 }
 

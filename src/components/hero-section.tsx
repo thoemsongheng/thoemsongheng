@@ -1,32 +1,42 @@
-import profile_pic from "@/assets/profile.jpg"
 import {
   FaSquareEnvelope,
   FaSquareFacebook,
   FaSquareGithub,
   FaSquareInstagram,
 } from "react-icons/fa6"
+import profile_pic from "@/assets/profile.jpg"
 
 export default function HeroSection() {
   return (
-    <section className="relative flex h-180 w-full flex-col items-center justify-center px-4">
-      <div className="absolute h-full w-full bg-[linear-gradient(rgba(51,65,85,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(51,65,85,0.1)_1px,transparent_1px),linear-gradient(rgba(71,85,105,0.25)_2px,transparent_2px),linear-gradient(90deg,rgba(71,85,105,0.25)_2px,transparent_2px)] bg-size-[50px_50px,50px_50px,200px_200px,200px_200px]" />
+    <section className="relative top-0 flex h-screen w-screen flex-col items-center justify-center p-0">
+      {/* Square background styles  */}
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(251,146,60,0.08)_0%,transparent_40%)]"
+        className="bg-square-grid absolute h-full w-full"
+        aria-hidden="true"
+      />
+
+      {/* Accent colored background*/}
+      <div
+        className="bg-gradient-accent-1 absolute inset-0"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,rgba(251,146,60,0.08)_0%,transparent_40%)]"
+        className="bg-gradient-accent-2 absolute inset-0"
         aria-hidden="true"
       />
+
+      {/* Hero section contents*/}
       <div className="flex max-w-5xl gap-4">
         <div className="border border-[#091520]/40">
           <div className="group relative border border-white/5 object-cover">
+            {/* Accent colored corner*/}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#f97316_1.5px,transparent_1.5px),linear-gradient(to_bottom,#f97316_1.5px,transparent_1.5px),linear-gradient(to_left,#f97316_1.5px,transparent_1.5px),linear-gradient(to_top,#f97316_1.5px,transparent_1.5px)] bg-size-[16px_16px] bg-position-[0_0,0_0,100%_100%,100%_100%] bg-no-repeat" />
             <div className="flex aspect-3/4 h-56 max-h-100 w-full items-center justify-center overflow-hidden">
               <img src={profile_pic} className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
+
         <div className="flex h-full flex-col gap-3 text-white/90">
           <h1 className="text-3xl font-semibold">THOEM SONGHENG</h1>
           <div>
@@ -43,11 +53,13 @@ export default function HeroSection() {
             <FaSquareFacebook className="h-12 w-12" />
           </a>
         </div>
+
         <div className="text-white">
           <a href="">
             <FaSquareInstagram className="h-12 w-12" />
           </a>
         </div>
+
         <div className="text-white">
           <a href="">
             <FaSquareGithub className="h-12 w-12" />
